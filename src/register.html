@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新书登记</title>
+</head>
+<body>
+    <center>
+    <h1>新增图书登记</h1>
+    <form>
+        <p>图书名称: <input type="text" id = "0"></p><br>
+        <p>作者: <input type="text" id="1"></p><br>
+        <p>出版社: <input type="text" id="2"></p><br>
+        <p>出版日期: <input type="text" id="3"></p><br>
+        <p>库存数量: <input type="text" id="4"></p><br>
+        <p>选择图书封面进行上传</p>
+        <input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+       <br><br>
+        <p>
+            <input type="button" id="btn" value="确认提交"/>
+        </p>
+    </form>
+    </center>
+</body>
+<script type="text/javascript">
+    var date = new Date();
+    var nowMonth = date.getMonth();
+    if (nowMonth >= 0 && nowMonth <= 9) {
+        nowMonth = "0" + nowMonth;
+    }
+    var nowDay = date.getDate();
+    if (nowDay >= 0 && nowDay <= 9) {
+        nowDay = "0" + nowDay;
+    } 
+    var nowDate = parseInt("" + date.getFullYear() + nowMonth + nowDay);
+
+    var btn = document.getElementById("btn");
+    var aInputs = document.getElementsByTagName('input');
+    btn.onclick = function(){
+    if (aInputs[0].value == "" || aInputs[1].value == "" || aInputs[2].value == "" 
+        || aInputs[3].value == "" || aInputs[4].value == "") {
+            alert('有表单为空，请对其进行填写！');			         
+        } else if(parseInt(aInputs[4].value) <= 0) {
+            alert('图书库存数量不能小于0，请重新填写！');
+        } else if (parseInt(aInputs[3].value) > nowDate) {
+            alert("出版日期登记有误，请重新填写！")
+        } else {
+            alert('信息提交成功！');
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>图书馆现有书籍</h1>
+        <p>
+            <input type="button" name="" id="btn" value="登记新图书" />
+        </p>
+    </center>
+    <center>
+    <table border="1">
+        <tbody>
+          <tr>
+            <td>图书封面</td>
+            <td>图书名称</td>
+            <td>作者</td>
+            <td>出版社</td>
+            <td>出版日期</td>
+            <td>库存数量</td>
+          </tr>
+          <tr>
+            <td><img src = "../imags/1.jpg"/></td>
+            <td>世界简史</td>
+            <td>威尔斯</td>
+            <td>台海出版社</td>
+            <td>2019-04-01</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td><img src = "../imags/2.jpg"/></td>
+            <td>全球通史</td>
+            <td>斯塔夫里阿诺斯</td>
+            <td>北京大学出版社</td>
+            <td>2012-02-01</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td><img src = "../imags/3.jpg"/></td>
+            <td>乌合之众</td>
+            <td>古斯塔夫·勒庞</td>
+            <td>中国妇女出版社</td>
+            <td>2017-09-01</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td><img src = "../imags/4.jpg"/></td>
+            <td>断舍离</td>
+            <td>山下英子</td>
+            <td>湖南文艺出版社</td>
+            <td>2019-01-01</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <td><img src = "../imags/5.jpg"/></td>
+            <td>三体</td>
+            <td>刘慈欣</td>
+            <td>重庆出版社</td>
+            <td>2008-01-01</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+</body>
+<script type="text/javascript">
+    var btn = document.getElementById("btn");
+    btn.onclick = function(){
+        window.location.href='register.html';			         
+    }
+</script>
+</html>
